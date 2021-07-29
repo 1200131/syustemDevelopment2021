@@ -3,6 +3,7 @@ package jp.ac.isc.cloud;
 import java.io.*;
 import java.sql.*;
 import java.util.*;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 
@@ -11,7 +12,7 @@ public class UserSelectServlet extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-	try {
+
 		 //DB接続に使用するクラス
 		 Connection users = null;
 		 try {
@@ -41,4 +42,5 @@ public class UserSelectServlet extends HttpServlet{
 	}catch(SQLException e) {
 		e.printStackTrace();
 	}
+}
 	}

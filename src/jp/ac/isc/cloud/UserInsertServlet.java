@@ -2,17 +2,15 @@ package jp.ac.isc.cloud;
 
 import java.io.*;
 import java.sql.*;
-import java.util.*;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
-
-import org.eclipse.jdt.internal.compiler.ast.*;
 
 public class UserInsertServlet {
 
 protected void doPost(HttpServletRequest request, HttpServletResponse response)
 throws ServletException, IOException {
-	 try {
+
 	 Connection users = null;
 	 try {
 		 users = DBConnection.openConnection();

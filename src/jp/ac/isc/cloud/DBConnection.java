@@ -9,15 +9,14 @@ public static Connection openConnection() {
 	Connection users = null;
 	 try {
 		 Class.forName("com.mysql.jdbc.Driver");
-		 users = DriverManager.getConnection("jdbc:mysql://localhost/servlet_db?useUnicode=
-				 true&characterEncoding=utf8","root","");
-	 }catch(SQLException e) {←①
+		 users = DriverManager.getConnection("jdbc:mysql://localhost/servlet_db?useUnicode = true&characterEncoding=utf8","root","");
+	 }catch(SQLException e) {
 		 e.printStackTrace();
 
-	 }catch(ClassNotFoundException e) {←②
+	 }catch(ClassNotFoundException e) {
 		 e.printStackTrace();
 	 }
-	 return users; ←③
+	 return users;
 	 }
 	public static void closeConnection(Connection users,Statement state) {
 	 try {
